@@ -5,6 +5,7 @@
     discord
     stremio
     firefox
+    spotify
   ];
 
   services.xserver.desktopManager.cinnamon.enable = true;

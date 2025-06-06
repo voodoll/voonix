@@ -5,7 +5,7 @@
 }: {
   services.xserver.videoDrivers = ["nvidia"];
   hardware = {
-    cpu.inte.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+    cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     nvidia = {
       modesetting.enable = true;
       powerManagement.enable = false;

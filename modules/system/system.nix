@@ -6,7 +6,7 @@
   ...
 }: {
   services = {
-    xserver.xkb.layout = "${variables.kb}";
+    xserver.xkb.layout = "${variables.keyboard}";
     flatpak.enable = true;
   };
 

@@ -1,6 +1,6 @@
-{config, ...}: {
+{variables, ...}: {
   networking = {
-    hostName = config.opts.hostname;
+    hostName = variables.hostname;
     networkmanager.enable = true;
     timeServers = ["pool.ntp.org"];
     firewall = {

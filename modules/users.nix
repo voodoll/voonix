@@ -1,6 +1,6 @@
 {variables, ...}: {
-  nix.settings.allowed-users = [variables.user];
-  users.users."${variables.user}" = {
+  nix.settings.allowed-users = [variables.username];
+  users.users."${variables.username}" = {
     isNormalUser = true;
     initialPassword = "1234";
     extraGroups = [

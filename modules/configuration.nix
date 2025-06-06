@@ -8,8 +8,13 @@
     spotify
   ];
 
-  services.xserver.desktopManager.cinnamon.enable = true;
-  services.cinnamon.apps.enable = true;
+  services = {
+    xserver = {
+      displayManager.lightdm.enable = true;
+      desktopManager.cinnamon.enable = true;
+    };
+    cinnamon.apps.enable = true;
+  };
 
   programs = {
     java = {

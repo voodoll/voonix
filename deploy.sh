@@ -1,5 +1,7 @@
 #!/bin/sh
 
+hostname=$1
+
 # script to deploy systems
 sudo nix \
     --experimental-features "nix-command flakes" \

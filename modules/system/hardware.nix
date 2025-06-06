@@ -1,6 +1,11 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  ...
+}: {
   services.xserver.videoDrivers = ["nvidia"];
   hardware = {
+    cpu.inte.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     nvidia = {
       modesetting.enable = true;
       powerManagement.enable = false;
@@ -19,5 +24,9 @@
         };
       };
     };
+  };
+  boot = {
+    kernelModules = ["kvm-intel"];
+    initrd.availableKernelModules = ["xhci_pci" "ahvi" "nvme" "usbhid" "usb_storage" "sd_mod"];
   };
 }

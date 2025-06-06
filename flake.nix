@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,6 +13,7 @@
   outputs = {
     nixpkgs,
     disko,
+    nix-minecraft,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -31,6 +33,7 @@
         };
         modules = [
           disko.nixosModules.disko
+          nix-minecraft.nixosModules.minecraft-servers
           ./modules
         ];
       };

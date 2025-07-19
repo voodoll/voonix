@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    vim
     discord
     stremio
     firefox
@@ -19,6 +18,8 @@
   };
 
   programs = {
+    git.enable = true;
+    vim.enable = true;
     java = {
       enable = true;
       package = pkgs.jre8;

@@ -6,6 +6,7 @@
     stremio
     firefox
     spotify
+    rustdesk
   ];
 
   services = {

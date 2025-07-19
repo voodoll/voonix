@@ -2,11 +2,8 @@
   description = "voo's computer";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    disko.url = "github:nix-community/disko";
   };
 
   outputs = {
